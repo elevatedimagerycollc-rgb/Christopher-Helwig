@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events | Elevated Imagery</title>
+  <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-100">
+
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <a href="index.html" class="flex items-center text-blue-600 font-bold text-xl">
+            <i data-feather="camera" class="h-8 w-8"></i>
+            <span class="ml-2">Elevated Imagery</span>
+          </a>
+        </div>
+        <div class="hidden md:flex md:items-center md:space-x-8">
+          <a href="https://elevatedimagerycollc-rgb.github.io/#home" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</a>
+          <a href="https://elevatedimagerycollc-rgb.github.io/#services" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</a>
+          <a href="https://elevatedimagerycollc-rgb.github.io/#portfolio" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Portfolio</a>
+          <a href="https://elevatedimagerycollc-rgb.github.io/#contact" class="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Event Coverage</h1>
+      <a href="https://elevatedimagerycollc-rgb.github.io/#services" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View Services</a>
+      <a href="https://elevatedimagerycollc-rgb.github.io/#portfolio" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">View Portfolio</a>
+      <a href="https://elevatedimagerycollc-rgb.github.io/#contact" class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Contact Us</a>
+    </section>
+    
+<!-- Real Estate Photography Section -->
+<section id="real-estate" class="py-20">
+  <div class="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+    <div class="bg-green-100/70 backdrop-blur-md p-8 rounded-xl">
+      <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+        
+        <!-- Left: Stacked Images -->
+        <div data-aos="fade-right" class="space-y-6 mb-12 lg:mb-0">
+          <img src="images/WeddingCelebration.JPG" alt="Engagement" class="rounded-xl shadow-lg w-3/4 cursor-pointer" onclick="openModal(this)">
+          <img src="event-images/Wedding.jpg" alt="Modern Living Room" class="rounded-xl shadow-lg w-3/4 cursor-pointer" onclick="openModal(this)">
+          <img src="event-images/carmeet.jpg" alt="Drone Engagement" class="rounded-xl shadow-lg w-3/4 cursor-pointer" onclick="openModal(this)">
+        </div>
+
+        <!-- Right: Text Content -->
+        <div data-aos="fade-left" class="flex flex-col justify-center text-left">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Event Photography/Videography</h2>
+          <p class="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+            At Elevated Imagery, we want to capture you're event in the best quality to 
+            preserve your memories forever. These events can range from concerts, vehicle shows, 
+            engagements, and weddings. Our mission is to give you something to cherish for years to come.
+          </p>
+          <p class="text-lg md:text-xl text-gray-700 mb-6 leading-relaxed">
+            Whether you're setting up an engagement session, planning a wedding, or coordinating a 
+            small-scale nonprofit event such as a vehicle show or concert, we are confident these 
+            photographs will capture the essence and significance of your occasion with timeless quality."
+          </p>
+          <ul class="space-y-4 text-lg text-gray-700">
+            <li class="flex items-start">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-white">
+                  <i data-feather="home" class="text-blue-600"></i>
+                </div>
+              </div>
+              <p class="ml-3"><span class="font-medium text-gray-900">Clooseup and Zoomed Shots</span> – Highlight the best features of your Event</p>
+            </li>
+            <li class="flex items-start">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-white">
+                  <i data-feather="airplay" class="text-blue-600"></i>
+                </div>
+              </div>
+              <p class="ml-3"><span class="font-medium text-gray-900">Aerial Drone Photography</span> – Showcase the vastness of your event</p>
+            </li>
+            <li class="flex items-start">
+              <div class="flex-shrink-0">
+                <div class="flex items-center justify-center h-8 w-8 rounded-full bg-white">
+                  <i data-feather="edit-3" class="text-blue-600"></i>
+                </div>
+              </div>
+              <p class="ml-3"><span class="font-medium text-gray-900">Professional Editing</span> – Every image is enhanced for maximum impact.</p>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50" onclick="outsideClick(event)">
+  <span class="absolute top-6 right-8 text-white text-4xl cursor-pointer" onclick="closeModal()">&times;</span>
+  <img id="lightbox-img" src="" alt="Preview" class="max-h-[90%] max-w-[90%] rounded-lg shadow-xl">
+</div>
+
+  <!-- Modal -->
+  <div id="lightbox" class="hidden fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50" onclick="outsideClick(event)">
+    <span class="absolute top-6 right-8 text-white text-4xl cursor-pointer" onclick="closeModal()">&times;</span>
+    <img id="lightbox-img" src="" alt="Preview" class="max-h-[90%] max-w-[90%] rounded-lg shadow-xl">
+  </div>
+
+<!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-white py-12 w-full mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p>© 2025 Elevated Imagery LLC. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox Script -->
+  <script>
+    function openModal(imgElement) {
+      const modal = document.getElementById("lightbox");
+      const modalImg = document.getElementById("lightbox-img");
+      modal.classList.remove("hidden");
+      modalImg.src = imgElement.src;
+    }
+
+    function closeModal() {
+      document.getElementById("lightbox").classList.add("hidden");
+    }
+
+    function outsideClick(event) {
+      const modal = document.getElementById("lightbox");
+      const modalImg = document.getElementById("lightbox-img");
+      // Only close if clicking outside the image
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+
+    // Close on Esc key
+    document.addEventListener("keydown", function(event) {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
